@@ -1,0 +1,34 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Editor and local tooling
+.idea/
+.vscode/
+.cache/
+.parcel-cache/
+.vercel/
+*.swp
+*.swo
+*.tsbuildinfo
+
+# Dependency and build output (not required by this project)
+node_modules/
+dist/
+coverage/
+
+# Local environment and logs
+.env
+.env.*
+local.properties
+secure.properties
+keystore.properties
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+*.key
+*.log
+npm-debug.log*
+pnpm-debug.log*

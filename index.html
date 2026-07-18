@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="RunawayButton is a playful challenge: catch the button that refuses to be clicked."
+    >
+    <meta name="theme-color" content="#10172a">
+    <title>RunawayButton — Catch Me If You Can</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="page-noise" aria-hidden="true"></div>
+
+    <main class="app-shell">
+      <header class="masthead">
+        <a class="brand" href="./" aria-label="RunawayButton home">
+          <span class="brand-mark" aria-hidden="true">RB</span>
+          <span>RunawayButton</span>
+        </a>
+
+        <div class="controls" aria-label="Game controls">
+          <button
+            class="control-button"
+            id="soundControl"
+            type="button"
+            aria-pressed="true"
+          >
+            <span class="control-icon" aria-hidden="true">♪</span>
+            <span id="soundLabel">Sound on</span>
+          </button>
+          <button class="control-button" id="resetControl" type="button">
+            <span class="control-icon" aria-hidden="true">↻</span>
+            <span>Reset</span>
+          </button>
+        </div>
+      </header>
+
+      <section class="hero" aria-labelledby="gameTitle">
+        <p class="eyebrow">A tiny test of patience</p>
+        <h1 id="gameTitle">Catch me<br><span>if you can.</span></h1>
+        <p class="hero-copy">
+          One button. Ten escapes. Absolutely no intention of cooperating.
+        </p>
+      </section>
+
+      <section class="game-card" aria-labelledby="arenaTitle">
+        <div class="scoreboard">
+          <div>
+            <p class="score-label" id="arenaTitle">Escape attempts</p>
+            <p class="score-value"><span id="attemptCount">0</span><span>/10</span></p>
+          </div>
+
+          <ol class="attempt-meter" id="attemptMeter" aria-hidden="true">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ol>
+        </div>
+
+        <div class="game-stage" id="gameStage">
+          <p class="stage-label" aria-hidden="true">Live target zone</p>
+
+          <div class="orbit orbit-one" aria-hidden="true"></div>
+          <div class="orbit orbit-two" aria-hidden="true"></div>
+
+          <button
+            class="target-button"
+            id="runawayButton"
+            type="button"
+            aria-describedby="gameInstructions statusMessage"
+            aria-label="Click me, if you can"
+          >
+            <span id="buttonLabel">Click me</span>
+            <span class="button-glint" aria-hidden="true"></span>
+          </button>
+
+          <section
+            class="celebration-panel"
+            id="celebrationPanel"
+            aria-live="assertive"
+            aria-label="Challenge complete"
+            hidden
+          >
+            <span class="celebration-icon" aria-hidden="true">★</span>
+            <p>You finally caught me.</p>
+            <span>Persistence: undefeated.</span>
+          </section>
+        </div>
+
+        <div class="game-feedback">
+          <p class="status-message" id="statusMessage" aria-live="polite">
+            0 attempts. The button is feeling confident.
+          </p>
+          <p class="taunt-message" id="tauntMessage" aria-live="polite">
+            Go on. It looks easy.
+          </p>
+        </div>
+      </section>
+
+      <aside class="instructions" id="gameInstructions" aria-label="How to play">
+        <p><span aria-hidden="true">↗</span> Move toward it or tap it.</p>
+        <p><span aria-hidden="true">↵</span> Use <kbd>Tab</kbd> + <kbd>Enter</kbd> on a keyboard.</p>
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      <p>Built for stubborn people and slippery buttons.</p>
+      <p>Mouse · Touch · Keyboard</p>
+    </footer>
+
+    <noscript>
+      <p class="noscript-message">RunawayButton needs JavaScript to make its escape.</p>
+    </noscript>
+  </body>
+</html>
