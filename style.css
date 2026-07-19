@@ -115,10 +115,10 @@ button {
   align-items: center;
   gap: 8px;
   padding: 9px 14px;
-  border: 2px solid var(--paper);
+  border: 3px solid var(--ink);
   border-radius: 0.75rem;
-  color: var(--paper);
-  background: rgba(24, 35, 61, 0.8);
+  color: var(--ink);
+  background: var(--paper);
   box-shadow: 3px 3px 0 var(--blue);
   cursor: pointer;
   font-size: 0.88rem;
@@ -127,11 +127,12 @@ button {
 }
 
 .control-button:hover {
-  border-color: var(--electric-light);
-  background: var(--ink-soft);
+  border-color: var(--ink);
+  background: var(--butter);
   transform: translateY(-1px);
 }
 
+.brand:focus-visible,
 .control-button:focus-visible,
 .target-button:focus-visible {
   outline: 4px solid var(--blue);
@@ -139,7 +140,7 @@ button {
 }
 
 .control-icon {
-  color: var(--yellow);
+  color: var(--ink);
   font-family: var(--utility-font);
   font-size: 1rem;
 }
