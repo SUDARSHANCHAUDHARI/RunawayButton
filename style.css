@@ -1,19 +1,22 @@
 :root {
   color-scheme: dark;
-  --ink: #10172a;
-  --ink-soft: #18233d;
-  --paper: #f7f3e8;
+  --ink: #15152a;
+  --ink-soft: #24233f;
+  --paper: #fff5df;
   --paper-muted: #c5cad6;
-  --electric: #5b8cff;
-  --electric-light: #91b2ff;
-  --coral: #ff6b6b;
-  --yellow: #ffd166;
-  --mint: #76e6c4;
-  --line: rgba(247, 243, 232, 0.16);
-  --shadow: #080c17;
-  --display-font: "Arial Black", "Avenir Next", "Trebuchet MS", sans-serif;
-  --body-font: "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif;
-  --utility-font: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  --coral: #ff5d5d;
+  --blue: #4f7cff;
+  --butter: #ffd166;
+  --mint: #58d6a9;
+  --lilac: #b695ff;
+  --electric: var(--blue);
+  --electric-light: var(--lilac);
+  --yellow: var(--butter);
+  --line: rgb(255 245 223 / 0.2);
+  --shadow: var(--ink);
+  --display-font: Impact, Haettenschweiler, "Arial Narrow Bold", "Franklin Gothic Condensed", sans-serif;
+  --body-font: Inter, ui-rounded, "SF Pro Rounded", "Segoe UI", sans-serif;
+  --utility-font: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
 
 * {
@@ -21,7 +24,7 @@
 }
 
 html {
-  min-width: 320px;
+  min-width: 0;
   min-height: 100%;
   background: var(--ink);
 }
@@ -30,7 +33,7 @@ body {
   min-height: 100vh;
   min-height: 100svh;
   margin: 0;
-  overflow-x: hidden;
+  overflow-x: clip;
   color: var(--paper);
   background:
     radial-gradient(circle at 13% 18%, rgba(91, 140, 255, 0.18) 0 10rem, transparent 10.1rem),
@@ -112,10 +115,11 @@ button {
   align-items: center;
   gap: 8px;
   padding: 9px 14px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
+  border: 2px solid var(--paper);
+  border-radius: 0.75rem;
   color: var(--paper);
   background: rgba(24, 35, 61, 0.8);
+  box-shadow: 3px 3px 0 var(--blue);
   cursor: pointer;
   font-size: 0.88rem;
   font-weight: 700;
@@ -130,7 +134,7 @@ button {
 
 .control-button:focus-visible,
 .target-button:focus-visible {
-  outline: 3px solid var(--yellow);
+  outline: 4px solid var(--blue);
   outline-offset: 4px;
 }
 
@@ -194,10 +198,10 @@ button {
 .game-card {
   position: relative;
   overflow: visible;
-  border: 1px solid rgba(145, 178, 255, 0.34);
+  border: 3px solid var(--ink);
   border-radius: 26px 8px 26px 8px;
   background: rgba(24, 35, 61, 0.72);
-  box-shadow: 16px 18px 0 rgba(8, 12, 23, 0.52);
+  box-shadow: 8px 8px 0 var(--blue);
   backdrop-filter: blur(14px);
 }
 
@@ -599,6 +603,19 @@ kbd {
   margin: 0;
 }
 
+.collection-link {
+  color: var(--paper);
+  font-family: var(--display-font);
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-underline-offset: 3px;
+}
+
+.collection-link:focus-visible {
+  outline: 4px solid var(--blue);
+  outline-offset: 4px;
+}
+
 .noscript-message {
   position: fixed;
   right: 18px;
@@ -715,7 +732,7 @@ kbd {
 
   .game-card {
     border-radius: 20px 7px 20px 7px;
-    box-shadow: 8px 10px 0 rgba(8, 12, 23, 0.52);
+    box-shadow: 6px 6px 0 var(--blue);
   }
 
   .scoreboard {
